@@ -14,7 +14,9 @@ namespace KockaPoker
     public partial class Form1 : Form
     {
         List<PictureBox> jatekosKepek = new List<PictureBox>();
+        List<PictureBox> gepKepek = new List<PictureBox>();
         Jatekos j;
+        Jatekos g;
 
         public Form1()
         {
@@ -26,9 +28,17 @@ namespace KockaPoker
             jatekosKepek.Add(pbElsoJatekos4);
             jatekosKepek.Add(pbElsoJatekos5);
 
+            gepKepek.Add(pbMasodikJatekos1);
+            gepKepek.Add(pbMasodikJatekos2);
+            gepKepek.Add(pbMasodikJatekos3);
+            gepKepek.Add(pbMasodikJatekos4);
+            gepKepek.Add(pbMasodikJatekos5);
+
             j = new Jatekos("Szerencsés Pista", jatekosKepek);
+            g = new Jatekos("Gép", gepKepek);
 
             j.KepekBeallitasa();
+            g.KepekBeallitasa();
         }
 
         private void btnKilepes_Click(object sender, EventArgs e)
