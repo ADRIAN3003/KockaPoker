@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KockaPoker.SajatOsztalyok;
 
 namespace KockaPoker
 {
     public partial class Form1 : Form
     {
+        Leosztas l = new Leosztas();
+
         public Form1()
         {
             InitializeComponent();
