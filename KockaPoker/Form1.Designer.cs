@@ -34,12 +34,13 @@ namespace KockaPoker
             // 
             // btnKilepes
             // 
+            this.btnKilepes.BackColor = System.Drawing.SystemColors.Control;
             this.btnKilepes.Location = new System.Drawing.Point(762, 12);
             this.btnKilepes.Name = "btnKilepes";
             this.btnKilepes.Size = new System.Drawing.Size(99, 39);
             this.btnKilepes.TabIndex = 0;
             this.btnKilepes.Text = "Kilépés";
-            this.btnKilepes.UseVisualStyleBackColor = true;
+            this.btnKilepes.UseVisualStyleBackColor = false;
             this.btnKilepes.Click += new System.EventHandler(this.btnKilepes_Click);
             // 
             // Form1
