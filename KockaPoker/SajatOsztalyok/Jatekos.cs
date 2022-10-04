@@ -16,7 +16,7 @@ namespace KockaPoker.SajatOsztalyok
             set { nev = value; }
         }
 
-        private Leosztas leosztas;
+        private Leosztas leosztas = new Leosztas();
 
         public Leosztas Kockak
         {
