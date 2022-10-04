@@ -13,11 +13,21 @@ namespace KockaPoker
 {
     public partial class Form1 : Form
     {
-        Jatekos j = new Jatekos("Szerencsés Pista");
+        List<PictureBox> jatekosKepek = new List<PictureBox>();
+        Jatekos j;
 
         public Form1()
         {
             InitializeComponent();
+
+            jatekosKepek.Add(pbElsoJatekos1);
+            jatekosKepek.Add(pbElsoJatekos2);
+            jatekosKepek.Add(pbElsoJatekos3);
+            jatekosKepek.Add(pbElsoJatekos4);
+            jatekosKepek.Add(pbElsoJatekos5);
+
+            j = new Jatekos("Szerencsés Pista", jatekosKepek);
+
             pbElsoJatekos1.Image = Properties.Resources.kek1;
             pbElsoJatekos2.Image = Properties.Resources.kek2;
             pbElsoJatekos3.Image = Properties.Resources.kek3;
@@ -27,9 +37,6 @@ namespace KockaPoker
 
         private void btnKilepes_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(j.ToString());
-            j.UjLeosztas();
-            MessageBox.Show(j.ToString());
             Application.Exit();
         }
     }

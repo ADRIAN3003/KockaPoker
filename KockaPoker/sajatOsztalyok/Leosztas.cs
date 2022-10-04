@@ -42,5 +42,10 @@ namespace KockaPoker.SajatOsztalyok
 
             return tmp.ToString();
         }
+
+        public int MilyenErtek(int hanyadikKocka)
+        {
+            return kockak[hanyadikKocka];
+        }
     }
 }

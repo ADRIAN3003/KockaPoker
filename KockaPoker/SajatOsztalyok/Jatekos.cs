@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace KockaPoker.SajatOsztalyok
 {
     class Jatekos
     {
+        List<PictureBox> kockaKepek = new List<PictureBox>();
+
         private string nev;
 
         public string Nev
@@ -20,7 +23,7 @@ namespace KockaPoker.SajatOsztalyok
 
         public Leosztas Kockak
         {
-            get { return leosztas = new Leosztas(); }
+            get { return leosztas; }
         }
 
         public override string ToString()
@@ -28,14 +31,23 @@ namespace KockaPoker.SajatOsztalyok
             return $"{Nev} - {Kockak.ToString()}";
         }
 
-        public Jatekos(string nev)
+        public Jatekos(string nev, List<PictureBox> kockaKepek)
         {
             Nev = nev;
+            this.kockaKepek = kockaKepek;
         }
 
         public void UjLeosztas()
         {
+            leosztas.UjLeosztas();
+        }
 
+        public void KepekBeallitasa()
+        {
+            foreach (var k in kockaKepek)
+            {
+                //k.Image = KepValaszt();
+            }
         }
     }
 }
