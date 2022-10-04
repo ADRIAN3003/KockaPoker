@@ -29,13 +29,39 @@ namespace KockaPoker
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnKilepes = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnKilepes
+            // 
+            this.btnKilepes.Location = new System.Drawing.Point(735, 12);
+            this.btnKilepes.Name = "btnKilepes";
+            this.btnKilepes.Size = new System.Drawing.Size(99, 39);
+            this.btnKilepes.TabIndex = 0;
+            this.btnKilepes.Text = "Kilépés";
+            this.btnKilepes.UseVisualStyleBackColor = true;
+            this.btnKilepes.Click += new System.EventHandler(this.btnKilepes_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(846, 555);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnKilepes);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Kocka Póker";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnKilepes;
     }
 }
 
