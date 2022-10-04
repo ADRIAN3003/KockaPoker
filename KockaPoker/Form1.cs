@@ -37,7 +37,8 @@ namespace KockaPoker
 
         private void btnKilepes_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            j.KepekBeallitasa();
+            //Application.Exit();
         }
     }
 }

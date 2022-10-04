@@ -47,7 +47,7 @@ namespace KockaPoker.SajatOsztalyok
             int i = 0;
             foreach (var k in kockaKepek)
             {
-                switch (leosztas.MilyenErtek(i))
+                switch (leosztas.MilyenErtek(i++))
                 {
                     case 1:
                         k.Image = Properties.Resources.kek1;
