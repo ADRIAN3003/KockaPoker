@@ -10,14 +10,26 @@ namespace KockaPoker.SajatOsztalyok
     {
         List<int> kockak = new List<int>();
 
+        public void UjLeosztas()
+        {
+            kockak = Keveres();
+        }
+
         public Leosztas()
         {
+            kockak = Keveres();
+        }
+
+        private List<int> Keveres()
+        {
+            List<int> k = new List<int>();
             Random rnd = new Random(Guid.NewGuid().GetHashCode());
 
             for (int i = 0; i < 5; i++)
             {
-                kockak.Add(rnd.Next(1, 6));
+                k.Add(rnd.Next(1, 6));
             }
+            return k;
         }
 
         public override string ToString()

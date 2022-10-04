@@ -32,5 +32,10 @@ namespace KockaPoker.SajatOsztalyok
         {
             Nev = nev;
         }
+
+        public void UjLeosztas()
+        {
+
+        }
     }
 }

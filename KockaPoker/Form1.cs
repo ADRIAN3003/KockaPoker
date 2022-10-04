@@ -13,7 +13,6 @@ namespace KockaPoker
 {
     public partial class Form1 : Form
     {
-        Leosztas l = new Leosztas();
         Jatekos j = new Jatekos("Szerencsés Pista");
 
         public Form1()
@@ -28,6 +27,8 @@ namespace KockaPoker
 
         private void btnKilepes_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(j.ToString());
+            j.UjLeosztas();
             MessageBox.Show(j.ToString());
             Application.Exit();
         }
