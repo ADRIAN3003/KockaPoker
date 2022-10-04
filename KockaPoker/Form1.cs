@@ -28,17 +28,12 @@ namespace KockaPoker
 
             j = new Jatekos("Szerencsés Pista", jatekosKepek);
 
-            pbElsoJatekos1.Image = Properties.Resources.kek1;
-            pbElsoJatekos2.Image = Properties.Resources.kek2;
-            pbElsoJatekos3.Image = Properties.Resources.kek3;
-            pbElsoJatekos4.Image = Properties.Resources.kek4;
-            pbElsoJatekos5.Image = Properties.Resources.kek5;
+            j.KepekBeallitasa();
         }
 
         private void btnKilepes_Click(object sender, EventArgs e)
         {
-            j.KepekBeallitasa();
-            //Application.Exit();
+            Application.Exit();
         }
     }
 }
