@@ -34,7 +34,7 @@ namespace KockaPoker
             // 
             // btnKilepes
             // 
-            this.btnKilepes.Location = new System.Drawing.Point(735, 12);
+            this.btnKilepes.Location = new System.Drawing.Point(762, 12);
             this.btnKilepes.Name = "btnKilepes";
             this.btnKilepes.Size = new System.Drawing.Size(99, 39);
             this.btnKilepes.TabIndex = 0;
@@ -46,7 +46,9 @@ namespace KockaPoker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 555);
+            this.BackgroundImage = global::KockaPoker.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(873, 555);
             this.ControlBox = false;
             this.Controls.Add(this.btnKilepes);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
