@@ -16,7 +16,7 @@ namespace KockaPoker
         List<PictureBox> jatekosKepek = new List<PictureBox>();
         List<PictureBox> gepKepek = new List<PictureBox>();
         Jatekos j;
-        Jatekos g;
+        Gep g;
 
         public Form1()
         {
@@ -35,7 +35,7 @@ namespace KockaPoker
             gepKepek.Add(pbMasodikJatekos5);
 
             j = new Jatekos("Szerencsés Pista", jatekosKepek);
-            g = new Jatekos("Gép", gepKepek);
+            g = new Gep("Gép", gepKepek);
 
             j.KepekBeallitasa();
             g.KepekBeallitasa();

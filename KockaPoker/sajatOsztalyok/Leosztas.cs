@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KockaPoker.SajatOsztalyok
 {
-    class Leosztas
+    public class Leosztas
     {
         List<int> kockak = new List<int>();
 
