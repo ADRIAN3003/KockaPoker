@@ -35,6 +35,9 @@ namespace KockaPoker.SajatOsztalyok
                     case 5:
                         k.Image = Properties.Resources.zold5;
                         break;
+                    case 6:
+                        k.Image = Properties.Resources.zold6;
+                        break;
                 }
             }
         }

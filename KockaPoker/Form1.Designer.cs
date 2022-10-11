@@ -42,6 +42,9 @@ namespace KockaPoker
             this.pbMasodikJatekos4 = new System.Windows.Forms.PictureBox();
             this.pbMasodikJatekos2 = new System.Windows.Forms.PictureBox();
             this.pbMasodikJatekos1 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblJatekosErtek = new System.Windows.Forms.Label();
+            this.lblGepErtek = new System.Windows.Forms.Label();
             this.gbElso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbElsoJatekos5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbElsoJatekos3)).BeginInit();
@@ -54,6 +57,7 @@ namespace KockaPoker
             ((System.ComponentModel.ISupportInitialize)(this.pbMasodikJatekos4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMasodikJatekos2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMasodikJatekos1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnKilepes
@@ -185,6 +189,35 @@ namespace KockaPoker
             this.pbMasodikJatekos1.TabIndex = 0;
             this.pbMasodikJatekos1.TabStop = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblGepErtek);
+            this.groupBox1.Controls.Add(this.lblJatekosErtek);
+            this.groupBox1.Location = new System.Drawing.Point(41, 24);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(387, 236);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // lblJatekosErtek
+            // 
+            this.lblJatekosErtek.AutoSize = true;
+            this.lblJatekosErtek.Location = new System.Drawing.Point(22, 35);
+            this.lblJatekosErtek.Name = "lblJatekosErtek";
+            this.lblJatekosErtek.Size = new System.Drawing.Size(51, 20);
+            this.lblJatekosErtek.TabIndex = 0;
+            this.lblJatekosErtek.Text = "label1";
+            // 
+            // lblGepErtek
+            // 
+            this.lblGepErtek.AutoSize = true;
+            this.lblGepErtek.Location = new System.Drawing.Point(25, 89);
+            this.lblGepErtek.Name = "lblGepErtek";
+            this.lblGepErtek.Size = new System.Drawing.Size(51, 20);
+            this.lblGepErtek.TabIndex = 0;
+            this.lblGepErtek.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -193,6 +226,7 @@ namespace KockaPoker
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(873, 555);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbMasodik);
             this.Controls.Add(this.gbElso);
             this.Controls.Add(this.btnKilepes);
@@ -214,6 +248,8 @@ namespace KockaPoker
             ((System.ComponentModel.ISupportInitialize)(this.pbMasodikJatekos4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMasodikJatekos2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMasodikJatekos1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -233,6 +269,9 @@ namespace KockaPoker
         private System.Windows.Forms.PictureBox pbMasodikJatekos4;
         private System.Windows.Forms.PictureBox pbMasodikJatekos2;
         private System.Windows.Forms.PictureBox pbMasodikJatekos1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblGepErtek;
+        private System.Windows.Forms.Label lblJatekosErtek;
     }
 }
 

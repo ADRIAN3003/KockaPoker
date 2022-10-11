@@ -31,10 +31,23 @@ namespace KockaPoker.SajatOsztalyok
             return $"{Nev} - {Kockak.ToString()}";
         }
 
+        public void LeosztasBeallitasa(List<int> kockak)
+        {
+            leosztas.LeosztasBeallitasa(kockak);
+        }
+
         public Jatekos(string nev, List<PictureBox> kockaKepek)
         {
             Nev = nev;
             this.kockaKepek = kockaKepek;
+        }
+
+        public string LeosztasErtek
+        {
+            get
+            {
+                return leosztas.LeosztasErteke();
+            }
         }
 
         public void UjLeosztas()
@@ -63,6 +76,9 @@ namespace KockaPoker.SajatOsztalyok
                         break;
                     case 5:
                         k.Image = Properties.Resources.kek5;
+                        break;
+                    case 6:
+                        k.Image = Properties.Resources.kek6;
                         break;
                 }
             }
