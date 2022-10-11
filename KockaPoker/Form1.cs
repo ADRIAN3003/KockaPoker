@@ -41,13 +41,11 @@ namespace KockaPoker
 
         private void JatekosokBeallitasa()
         {
-            List<int> kockak = new List<int>() { 2, 2, 2, 3, 3 };
+            List<int> kockak = new List<int>() { 5, 5, 5, 5, 5 };
             j = new Jatekos("Szerencsés Pista", jatekosKepek);
-
             j.LeosztasBeallitasa(kockak);
 
             g = new Gep("Gép", gepKepek);
-
             j.KepekBeallitasa();
             g.KepekBeallitasa();
         }

@@ -55,7 +55,7 @@ namespace KockaPoker.SajatOsztalyok
         public string LeosztasErteke()
         {
 
-            kockak.Sort();
+            /*kockak.Sort();
             if (kockak[0] == kockak[1] && kockak[1] == kockak[2] && kockak[2] == kockak[3] && kockak[3] == kockak[4])
             {
                 return $"{kockak[0]} Nagy Póker";
@@ -83,8 +83,34 @@ namespace KockaPoker.SajatOsztalyok
             else if (kockak[0] == kockak[1] && kockak[1] == kockak[2] && kockak[3] == kockak[4])
             {
                 return $"{kockak[0]} - {kockak[3]} Full";
+            }*/
+
+            Dictionary<int, int> stat = Statisztika(kockak);
+
+            if (stat.Count == 1)
+            {
+                return $"Nagypóker";
             }
+
             return "Semmi";
+        }
+
+        private Dictionary<int, int> Statisztika(List<int> kockak)
+        {
+            Dictionary<int, int> tmp = new Dictionary<int, int>();
+            foreach (var k in kockak)
+            {
+                if (tmp.ContainsKey(k))
+                {
+                    tmp[k]++;
+                }
+                else
+                {
+                    tmp.Add(k, 1);
+                }
+            }
+
+            return tmp;
         }
     }
 }
