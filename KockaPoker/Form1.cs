@@ -31,7 +31,8 @@ namespace KockaPoker
 
         private void Kiertekeles()
         {
-            lblJatekosErtek.Text = j.LeosztasErtek;
+            lblJatekosErtek.Text = "1. játékos: " + j.LeosztasErtek;
+            lblGepErtek.Text = "2. játékos: " + g.LeosztasErtek;
         }
         private void VezerlokBeallitasa()
         {
@@ -41,9 +42,8 @@ namespace KockaPoker
 
         private void JatekosokBeallitasa()
         {
-            List<int> kockak = new List<int>() { 5, 5, 5, 5, 5 };
+            //List<int> kockak = new List<int>() { 1, 2, 2, 2, 4 };
             j = new Jatekos("Szerencsés Pista", jatekosKepek);
-            j.LeosztasBeallitasa(kockak);
 
             g = new Gep("Gép", gepKepek);
             j.KepekBeallitasa();

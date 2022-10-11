@@ -85,14 +85,76 @@ namespace KockaPoker.SajatOsztalyok
                 return $"{kockak[0]} - {kockak[3]} Full";
             }*/
 
+            kockak.Sort();
             Dictionary<int, int> stat = Statisztika(kockak);
+            string eredmeny = "";
 
             if (stat.Count == 1)
             {
-                return $"Nagypóker";
+                eredmeny = "Nagypóker";
+            }
+            else if (stat.Count == 5)
+            {
+                eredmeny = KissorNagysorSemmi(stat);
+            }
+            else if (stat.Count == 2)
+            {
+                eredmeny = PokerFull(stat);
+            }
+            else if (stat.Count == 3)
+            {
+                eredmeny = Drill2Par(stat);
+            }
+            else
+            {
+                eredmeny = $"{stat.OrderByDescending(x => x.Value).First().Key} Pár";
             }
 
-            return "Semmi";
+            return eredmeny;
+        }
+
+        private static string Drill2Par(Dictionary<int, int> stat)
+        {
+            string eredmeny;
+            if (stat.ContainsValue(3))
+                eredmeny = $"{stat.OrderByDescending(x => x.Value).First().Key} Drill";
+            else
+            {
+                List<int> parok = new List<int>();
+
+                foreach (var s in stat)
+                {
+                    if (s.Value == 2)
+                    {
+                        parok.Add(s.Key);
+                    }
+                }
+
+                eredmeny = $"{parok.Max()} - {parok.Min()} Pár";
+            }
+            return eredmeny;
+        }
+
+        private static string PokerFull(Dictionary<int, int> stat)
+        {
+            string eredmeny;
+            if (stat.ContainsValue(4))
+                eredmeny = $"{stat.OrderByDescending(x => x.Value).First().Key} Póker";
+            else
+                eredmeny = $"{stat.OrderByDescending(x => x.Value).First().Key} - {stat.OrderBy(x => x.Value).First().Key} Full";
+            return eredmeny;
+        }
+
+        private static string KissorNagysorSemmi(Dictionary<int, int> stat)
+        {
+            string eredmeny;
+            if (!stat.ContainsKey(1))
+                eredmeny = "Nagysor";
+            else if (!stat.ContainsKey(6))
+                eredmeny = "Kissor";
+            else
+                eredmeny = "Semmi";
+            return eredmeny;
         }
 
         private Dictionary<int, int> Statisztika(List<int> kockak)

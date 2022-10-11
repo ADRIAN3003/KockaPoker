@@ -83,5 +83,14 @@ namespace KockaPoker.SajatOsztalyok
                 }
             }
         }
+
+        private int pont;
+
+        public int Pont
+        {
+            get { return pont; }
+            set { pont = value; }
+        }
+
     }
 }

@@ -43,8 +43,8 @@ namespace KockaPoker
             this.pbMasodikJatekos2 = new System.Windows.Forms.PictureBox();
             this.pbMasodikJatekos1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblJatekosErtek = new System.Windows.Forms.Label();
             this.lblGepErtek = new System.Windows.Forms.Label();
+            this.lblJatekosErtek = new System.Windows.Forms.Label();
             this.gbElso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbElsoJatekos5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbElsoJatekos3)).BeginInit();
@@ -198,25 +198,25 @@ namespace KockaPoker
             this.groupBox1.Size = new System.Drawing.Size(387, 236);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Eredmények";
+            // 
+            // lblGepErtek
+            // 
+            this.lblGepErtek.AutoSize = true;
+            this.lblGepErtek.Location = new System.Drawing.Point(22, 89);
+            this.lblGepErtek.Name = "lblGepErtek";
+            this.lblGepErtek.Size = new System.Drawing.Size(40, 20);
+            this.lblGepErtek.TabIndex = 0;
+            this.lblGepErtek.Text = "Gép";
             // 
             // lblJatekosErtek
             // 
             this.lblJatekosErtek.AutoSize = true;
             this.lblJatekosErtek.Location = new System.Drawing.Point(22, 35);
             this.lblJatekosErtek.Name = "lblJatekosErtek";
-            this.lblJatekosErtek.Size = new System.Drawing.Size(51, 20);
+            this.lblJatekosErtek.Size = new System.Drawing.Size(65, 20);
             this.lblJatekosErtek.TabIndex = 0;
-            this.lblJatekosErtek.Text = "label1";
-            // 
-            // lblGepErtek
-            // 
-            this.lblGepErtek.AutoSize = true;
-            this.lblGepErtek.Location = new System.Drawing.Point(25, 89);
-            this.lblGepErtek.Name = "lblGepErtek";
-            this.lblGepErtek.Size = new System.Drawing.Size(51, 20);
-            this.lblGepErtek.TabIndex = 0;
-            this.lblGepErtek.Text = "label1";
+            this.lblJatekosErtek.Text = "Játékos";
             // 
             // Form1
             // 
