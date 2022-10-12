@@ -33,6 +33,19 @@ namespace KockaPoker
         {
             lblJatekosErtek.Text = "1. játékos: " + j.LeosztasErtek;
             lblGepErtek.Text = "2. játékos: " + g.LeosztasErtek;
+
+            if (j.Pont > g.Pont)
+            {
+                MessageBox.Show("Ember nyert!");
+            }
+            else if (j.Pont < g.Pont)
+            {
+                MessageBox.Show("Gép nyert!");
+            }
+            else
+            {
+                MessageBox.Show("Döntetlen!");
+            }
         }
         private void VezerlokBeallitasa()
         {
