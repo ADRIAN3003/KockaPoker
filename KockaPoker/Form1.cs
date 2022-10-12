@@ -38,17 +38,31 @@ namespace KockaPoker
 
             if (j.Pont > g.Pont)
             {
-                MessageBox.Show("Ember nyert!");
+                lblKijelzo.Text = "Ember nyert!";
+                j.Nyert++;
             }
             else if (j.Pont < g.Pont)
             {
-                MessageBox.Show("Gép nyert!");
+                lblKijelzo.Text = "Gép nyert!";
+                g.Nyert++;
             }
             else
             {
-                MessageBox.Show("Döntetlen!");
+                lblKijelzo.Text = "Döntetlen!";
+                j.Nyert++;
+                g.Nyert++;
             }
+            OsszesMenet++;
+            EredmenyekKiirasa();
         }
+
+        private void EredmenyekKiirasa()
+        {
+            lblMenetszam.Text = OsszesMenet + ". menet";
+            lblJGyozelem.Text = "Játékos: " + j.Nyert;
+            lblGGyozelem.Text = "Gép: " + g.Nyert;
+        }
+
         private void VezerlokBeallitasa()
         {
             lblGepErtek.Text = "";
@@ -97,6 +111,23 @@ namespace KockaPoker
         {
             JatekosokBeallitasa();
             btnKovetkezo.Enabled = true;
+            VezerlokBeallitasa();
+        }
+
+        private void btnKovetkezo_Click(object sender, EventArgs e)
+        {
+            j.UjLeosztas();
+            g.UjLeosztas();
+
+            j.KepekBeallitasa();
+            g.KepekBeallitasa();
+
+            Kiertekeles();
+        }
+
+        private void lblKijelzo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

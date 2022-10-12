@@ -316,17 +316,19 @@ namespace KockaPoker
             this.btnKovetkezo.TabIndex = 4;
             this.btnKovetkezo.Text = "Következő menet";
             this.btnKovetkezo.UseVisualStyleBackColor = false;
+            this.btnKovetkezo.Click += new System.EventHandler(this.btnKovetkezo_Click);
             // 
             // lblKijelzo
             // 
             this.lblKijelzo.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lblKijelzo.Font = new System.Drawing.Font("Consolas", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblKijelzo.Location = new System.Drawing.Point(590, 293);
+            this.lblKijelzo.Location = new System.Drawing.Point(463, 277);
             this.lblKijelzo.Name = "lblKijelzo";
-            this.lblKijelzo.Size = new System.Drawing.Size(271, 185);
+            this.lblKijelzo.Size = new System.Drawing.Size(398, 201);
             this.lblKijelzo.TabIndex = 5;
             this.lblKijelzo.Text = "Kijelző";
             this.lblKijelzo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblKijelzo.Click += new System.EventHandler(this.lblKijelzo_Click);
             // 
             // Form1
             // 
