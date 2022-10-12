@@ -22,11 +22,11 @@ namespace KockaPoker
         {
             InitializeComponent();
             PictureBoxokBeallitasa();
-            JatekosokBeallitasa();
+            //JatekosokBeallitasa();
 
             VezerlokBeallitasa();
 
-            Kiertekeles();
+            //Kiertekeles();
         }
 
         private void Kiertekeles()
@@ -51,6 +51,9 @@ namespace KockaPoker
         {
             lblGepErtek.Text = "";
             lblJatekosErtek.Text = "";
+            lblMenetszam.Text = "";
+            lblJGyozelem.Text = "Játékos: 0";
+            lblGGyozelem.Text = "Gép: 0";
         }
 
         private void JatekosokBeallitasa()
