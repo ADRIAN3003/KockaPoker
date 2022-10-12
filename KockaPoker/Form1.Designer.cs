@@ -46,12 +46,12 @@ namespace KockaPoker
             this.lblGepErtek = new System.Windows.Forms.Label();
             this.lblJatekosErtek = new System.Windows.Forms.Label();
             this.gbMenetszamlalo = new System.Windows.Forms.GroupBox();
-            this.lblMenetszam = new System.Windows.Forms.Label();
-            this.lblJGyozelem = new System.Windows.Forms.Label();
             this.lblGGyozelem = new System.Windows.Forms.Label();
+            this.lblJGyozelem = new System.Windows.Forms.Label();
+            this.lblMenetszam = new System.Windows.Forms.Label();
             this.btnUjJatek = new System.Windows.Forms.Button();
             this.btnKovetkezo = new System.Windows.Forms.Button();
-            this.btnKijelzo = new System.Windows.Forms.Label();
+            this.lblKijelzo = new System.Windows.Forms.Label();
             this.gbElso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbElsoJatekos5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbElsoJatekos3)).BeginInit();
@@ -256,14 +256,14 @@ namespace KockaPoker
             this.gbMenetszamlalo.TabStop = false;
             this.gbMenetszamlalo.Text = "Menetszámláló";
             // 
-            // lblMenetszam
+            // lblGGyozelem
             // 
-            this.lblMenetszam.AutoSize = true;
-            this.lblMenetszam.Location = new System.Drawing.Point(7, 24);
-            this.lblMenetszam.Name = "lblMenetszam";
-            this.lblMenetszam.Size = new System.Drawing.Size(90, 19);
-            this.lblMenetszam.TabIndex = 0;
-            this.lblMenetszam.Text = "Menetszám";
+            this.lblGGyozelem.AutoSize = true;
+            this.lblGGyozelem.Location = new System.Drawing.Point(7, 80);
+            this.lblGGyozelem.Name = "lblGGyozelem";
+            this.lblGGyozelem.Size = new System.Drawing.Size(99, 19);
+            this.lblGGyozelem.TabIndex = 0;
+            this.lblGGyozelem.Text = "G Győzelem";
             // 
             // lblJGyozelem
             // 
@@ -274,14 +274,14 @@ namespace KockaPoker
             this.lblJGyozelem.TabIndex = 0;
             this.lblJGyozelem.Text = "J Győzelmek";
             // 
-            // lblGGyozelem
+            // lblMenetszam
             // 
-            this.lblGGyozelem.AutoSize = true;
-            this.lblGGyozelem.Location = new System.Drawing.Point(7, 80);
-            this.lblGGyozelem.Name = "lblGGyozelem";
-            this.lblGGyozelem.Size = new System.Drawing.Size(99, 19);
-            this.lblGGyozelem.TabIndex = 0;
-            this.lblGGyozelem.Text = "G Győzelem";
+            this.lblMenetszam.AutoSize = true;
+            this.lblMenetszam.Location = new System.Drawing.Point(7, 24);
+            this.lblMenetszam.Name = "lblMenetszam";
+            this.lblMenetszam.Size = new System.Drawing.Size(90, 19);
+            this.lblMenetszam.TabIndex = 0;
+            this.lblMenetszam.Text = "Menetszám";
             // 
             // btnUjJatek
             // 
@@ -298,10 +298,12 @@ namespace KockaPoker
             this.btnUjJatek.TabIndex = 4;
             this.btnUjJatek.Text = "Új játék";
             this.btnUjJatek.UseVisualStyleBackColor = false;
+            this.btnUjJatek.Click += new System.EventHandler(this.btnUjJatek_Click);
             // 
             // btnKovetkezo
             // 
             this.btnKovetkezo.BackColor = System.Drawing.Color.Transparent;
+            this.btnKovetkezo.Enabled = false;
             this.btnKovetkezo.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.btnKovetkezo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
             this.btnKovetkezo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
@@ -315,15 +317,16 @@ namespace KockaPoker
             this.btnKovetkezo.Text = "Következő menet";
             this.btnKovetkezo.UseVisualStyleBackColor = false;
             // 
-            // btnKijelzo
+            // lblKijelzo
             // 
-            this.btnKijelzo.Font = new System.Drawing.Font("Consolas", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnKijelzo.Location = new System.Drawing.Point(590, 293);
-            this.btnKijelzo.Name = "btnKijelzo";
-            this.btnKijelzo.Size = new System.Drawing.Size(271, 185);
-            this.btnKijelzo.TabIndex = 5;
-            this.btnKijelzo.Text = "Kijelző";
-            this.btnKijelzo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblKijelzo.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lblKijelzo.Font = new System.Drawing.Font("Consolas", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblKijelzo.Location = new System.Drawing.Point(590, 293);
+            this.lblKijelzo.Name = "lblKijelzo";
+            this.lblKijelzo.Size = new System.Drawing.Size(271, 185);
+            this.lblKijelzo.TabIndex = 5;
+            this.lblKijelzo.Text = "Kijelző";
+            this.lblKijelzo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -333,7 +336,7 @@ namespace KockaPoker
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(873, 527);
             this.ControlBox = false;
-            this.Controls.Add(this.btnKijelzo);
+            this.Controls.Add(this.lblKijelzo);
             this.Controls.Add(this.btnKovetkezo);
             this.Controls.Add(this.btnUjJatek);
             this.Controls.Add(this.gbMenetszamlalo);
@@ -343,7 +346,7 @@ namespace KockaPoker
             this.Controls.Add(this.btnKilepes);
             this.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kocka Póker";
@@ -391,7 +394,7 @@ namespace KockaPoker
         private System.Windows.Forms.Label lblJGyozelem;
         private System.Windows.Forms.Button btnUjJatek;
         private System.Windows.Forms.Button btnKovetkezo;
-        private System.Windows.Forms.Label btnKijelzo;
+        private System.Windows.Forms.Label lblKijelzo;
     }
 }
 

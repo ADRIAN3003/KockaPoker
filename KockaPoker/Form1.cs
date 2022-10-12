@@ -18,6 +18,8 @@ namespace KockaPoker
         Jatekos j;
         Gep g;
 
+        private int OsszesMenet { get; set; }
+
         public Form1()
         {
             InitializeComponent();
@@ -54,14 +56,19 @@ namespace KockaPoker
             lblMenetszam.Text = "";
             lblJGyozelem.Text = "Játékos: 0";
             lblGGyozelem.Text = "Gép: 0";
+            lblKijelzo.Text = "";
+            OsszesMenet = 0;
         }
 
         private void JatekosokBeallitasa()
         {
             //List<int> kockak = new List<int>() { 1, 2, 2, 2, 4 };
             j = new Jatekos("Szerencsés Pista", jatekosKepek);
-
             g = new Gep("Gép", gepKepek);
+
+            j.Nyert = 0;
+            g.Nyert = 0;
+
             j.KepekBeallitasa();
             g.KepekBeallitasa();
         }
@@ -84,6 +91,12 @@ namespace KockaPoker
         private void btnKilepes_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnUjJatek_Click(object sender, EventArgs e)
+        {
+            JatekosokBeallitasa();
+            btnKovetkezo.Enabled = true;
         }
     }
 }
